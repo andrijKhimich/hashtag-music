@@ -1,0 +1,155 @@
+.dashboard-sidebar {
+  border-radius: $borderRadius;
+  background-color: $white;
+  box-shadow: $boxShadow;
+  padding: 40px 20px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: $white;
+  @include d(767) {
+    margin-bottom: 30px;
+  }
+
+  @include d(767) {
+    padding: 25px 20px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 42px;
+    @include d(767) {
+      margin-bottom: 0;
+    }
+  }
+
+  &-nav {
+    @include d(767) {
+      // display: none;
+      padding-top: 30px;
+    }
+
+    &__item {
+      margin-bottom: 7px;
+    }
+
+    &__link {
+      transition: color $timing $hover-duration;
+      position: relative;
+      display: block;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $primary;
+        transition: width $timing $hover-duration;
+      }
+      @include rh(1024) {
+        &:hover {
+          color: $primary;
+          &::after {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dashboard-sidebar-subnav {
+  padding: 10px 20px 10px 0;
+  margin: 20px 0;
+  position: relative;
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  &__link {
+    transition: color $hover-duration $timing;
+    @include rh(1024) {
+      
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  &_icon {
+    position: relative;
+
+    & .dashboard-sidebar-nav__link {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-left: 2px solid $textColor;
+        border-bottom: 2px solid $textColor;
+        transform: rotate(-45deg);
+        right: 20px;
+        top: 6px;
+        z-index: 1;
+        transition: transform $timing $hover-duration, border-color $hover-duration $timing;
+
+        @include d(992) {
+          right: 10px;
+        }
+        @include d(767) {
+          right: 20px;
+        }
+      }
+
+      &.active {
+        color: $primary;
+        &::after {
+          width: 30px;
+        }
+        &::before {
+          border-color: $primary;
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+}
+
+.dashboard-sidebar-subnav {
+  &_icon_sm {
+    position: relative;
+
+    & .dashboard-sidebar-subnav__link {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-left: 2px solid $textColor;
+        border-bottom: 2px solid $textColor;
+        transform: rotate(-45deg);
+        right: 0;
+        top: 6px;
+        z-index: 1;
+        transition: transform $timing $hover-duration, border-color $hover-duration $timing;
+
+        @include d(992) {
+          right: -10px;
+        }
+        @include d(767) {
+          right: 20px;
+        }
+      }
+
+      &.active {
+        color: $primary;
+        &::after {
+          width: 30px;
+        }
+        &::before {
+          border-color: $primary;
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Order</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    <main class="main">
+      <section class="section section-post-job step-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="post-job__content">
+                <div class="post-job__title">
+                  <h4 class="title-4">Job Details</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum libero ipsam iure nulla labore
+                    expedita quis quae porro quod doloremque.</p>
+                </div>
+                <ul class="steps">
+                  <li class="steps__item passed">1</li>
+                  <li class="steps__item passed">2</li>
+                  <li class="steps__item active">3</li>
+                </ul>
+                <div class="payment-wrap">
+                  <form class="payment-form">
+                    <div class="payment-list">
+                      <div class="payment-list__item">
+                        <label for="visa" class="payment-label">
+                          <input type="radio" id="visa" class="payment-radio" name="paymentMethod">
+                        </label>
+                        <img src="img/svg/visa.svg" alt="visa">
+                      </div>
+                      <div class="payment-list__item">
+                        <label for="paypal" class="payment-label">
+                          <input type="radio" id="paypal" class="payment-radio" name="paymentMethod">
+                        </label>
+                        <img src="img/svg/paypal.svg" alt="paypal">
+                      </div>
+                      <div class="payment-list__item">
+                        <label for="visa2" class="payment-label">
+                          <input type="radio" id="visa2" class="payment-radio" name="paymentMethod">
+                        </label>
+                        <img src="img/svg/visa.svg" alt="visa">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>

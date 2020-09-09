@@ -1,0 +1,193 @@
+.sidebar {
+  border-radius: $borderRadius;
+  background-color: $white;
+  box-shadow: $boxShadow;
+  padding: 45px 40px;
+  font-size: 14px;
+
+  @include d(767) {
+    margin-bottom: 30px;
+  }
+
+  @include d(767) {
+    padding: 25px 20px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 42px;
+    @include d(767) {
+      margin-bottom: 0;
+    }
+  }
+
+  &-nav {
+    @include d(767) {
+      display: none;
+      padding-top: 30px;
+    }
+
+    &__item {
+      margin-bottom: 7px;
+    }
+
+    &__link {
+      transition: color $timing $hover-duration;
+      position: relative;
+      display: block;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $primary;
+        transition: width $timing $hover-duration;
+      }
+      @include rh(1024) {
+        &:hover {
+          color: $primary;
+          &::after {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+.sidebar-subnav {
+  padding: 10px 20px;
+  margin: 10px 0;
+  position: relative;
+  background-color: #f3f4f8;
+  display: none;
+  border-radius: 5px 10px 10px 0;
+  &::before { 
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: $primary;
+  }
+  &__link {
+    transition: color $hover-duration $timing;
+    @include rh(1024) {
+      
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  &_icon {
+    position: relative;
+
+    & .sidebar-nav__link {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-left: 2px solid $textColor;
+        border-bottom: 2px solid $textColor;
+        transform: rotate(-45deg);
+        right: 20px;
+        top: 6px;
+        z-index: 1;
+        transition: transform $timing $hover-duration, border-color $hover-duration $timing;
+
+        @include d(992) {
+          right: -10px;
+        }
+        @include d(767) {
+          right: 20px;
+        }
+      }
+
+      &.active {
+        color: $primary;
+        &::after {
+          width: 30px;
+        }
+        &::before {
+          border-color: $primary;
+          // border-bottom: 2px solid $primaryDark;
+          transform: rotate(135deg);
+        }
+      }
+    }
+
+  }
+}
+.dashboard-sidebar-subnav_sm {
+  padding: 10px 20px;
+  margin: 10px 0;
+  position: relative;
+  background-color: #f3f4f8;
+  display: none;
+  border-radius: 5px 10px 10px 0;
+  &::before { 
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: $primary;
+  }
+  &__link {
+    transition: color $hover-duration $timing;
+    @include rh(1024) {
+      
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  &_icon {
+    position: relative;
+
+    & .sidebar-nav__link {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-left: 2px solid $textColor;
+        border-bottom: 2px solid $textColor;
+        transform: rotate(-45deg);
+        right: 20px;
+        top: 6px;
+        z-index: 1;
+        transition: transform $timing $hover-duration, border-color $hover-duration $timing;
+
+        @include d(992) {
+          right: -10px;
+        }
+        @include d(767) {
+          right: 20px;
+        }
+      }
+
+      &.active {
+        color: $primary;
+        &::after {
+          width: 30px;
+        }
+        &::before {
+          border-color: $primary;
+          // border-bottom: 2px solid $primaryDark;
+          transform: rotate(135deg);
+        }
+      }
+    }
+
+  }
+}

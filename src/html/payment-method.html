@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Order</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    <main class="main">
+      <section class="section section-order">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+              <div class="order-title">
+                <div class="order-header">
+                  <h4 class="title-4">Payment method</h4>
+                </div>
+              </div>
+              <div class="payment-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <form class="payment-form">
+                    <div class="payment-list">
+                      <div class="payment-list__item">
+                        <label for="paypal" class="payment-label">
+                          <input type="radio" id="paypal" class="payment-radio" name="paymentMethod">
+                        </label>
+                        <img src="img/svg/visa.svg" alt="visa">
+                      </div>
+                      <div class="payment-list__item">
+                        <label for="visa" class="payment-label">
+                          <input type="radio" id="visa" class="payment-radio" name="paymentMethod">
+                        </label>
+                        <img src="img/svg/paypal.svg" alt="paypal">
+                      </div>
+                    </div>
+                  </form>
+                  <div class="btn-group">
+                    <a href="#" class="btn btn-content">Back</a>
+                    <a href="#" class="btn btn_primary">Proceed</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>

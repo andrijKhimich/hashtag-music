@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Order</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    <main class="main">
+      <section class="section section-order">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+              <div class="order-title">
+                <div class="order-header">
+                  <h4 class="title-4">Successful payment</h4>
+                </div>
+              </div>
+              <div class="payment-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p>You are redirected to your order detail page in (secs)</p>
+                  <div class="counter js-counter">05</div>
+                  <div class="btn-group">
+                    <a href="#" class="btn btn_primary">BACK TO MY ORDER</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>

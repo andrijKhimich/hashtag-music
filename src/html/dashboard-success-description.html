@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Dashboard title</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    @@include('components/_admin-aside.html')
+    <main class="main"> 
+      <section class="section section-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <aside class="dashboard-sidebar">
+                <div class="dashboard-sidebar__content">
+                  <ul class="dashboard-sidebar-nav">
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Home</a>
+                      <ul class="dashboard-sidebar-subnav">
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Title
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Header slider
+                          </a>
+                          <ul class="dashboard-sidebar-subnav_sm">
+                            <li class="dashboard-sidebar-subnav_sm__item">
+                              <a href="#" class="dashboard-sidebar-subnav_sm__link">Photo group 1
+                              </a>
+                            </li>
+                            <li class="dashboard-sidebar-subnav_sm__item">
+                              <a href="#" class="dashboard-sidebar-subnav_sm__link">Photo group 2
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            List of categories
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            Banner
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            Slider
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            Banner2
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Blog</a>
+                    </li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Listing</a>
+                    </li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">How it
+                        works</a></li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Explore</a>
+                    </li>
+                  </ul>
+                </div>
+                <button class="add-page-btn">
+                  <svg class="svg-icon">
+                    <use xlink:href="img/svg/sprite-svg/sprite.svg#add"></use>
+                  </svg>
+                  Create new page
+                </button>
+              </aside>
+            </div>
+            <div class="col-lg-9">
+              <div class="dashboard-title">
+                <h4 class="title-4">Slider</h4>
+              </div>
+              <div class="dashboard-content">
+                <p>Success description</p>
+                <div class="dashboard-pane">
+                  <form class="dashboard-title-form">
+                    <input type="text" class="dashboard-input" placeholder="Title">
+                    <textarea rows="8" class="dashboard-input" placeholder="Description"></textarea>
+                    <button type="submit" class="dashboard-btn">Save</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>

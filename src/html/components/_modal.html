@@ -1,0 +1,182 @@
+<div class="modal" id="modalLogin">
+  <button class="close" data-fancybox-close>
+  </button>
+  <div class="modal__container">
+    <div class="modal__header">
+      <h4 class="title-4">Login</h4>
+    </div>
+    <form class="modal-form">
+      <div class="form-box">
+        <label for="mail" class="form-label">
+          Email address
+          <input type="email" id="mail" placeholder="name@yuoremail.com" class="form-input">
+        </label>
+        <span class="error">Error!!!</span>
+      </div>
+      <div class="form-box">
+        <label for="userPassword" class="form-label">
+          Password
+          <input type="password" id="userPassword" placeholder="password" class="form-input">
+        </label>
+        <span class="error">Error!!!</span>
+      </div>
+      <button class="btn btn_primary" type="submit">Login</button>
+    </form>
+    <div class="modal__footer">
+      <a href="#" class="forgot">Forgot password?</a>
+      <span></span>
+      <div class="social-login">
+        <p class="social-login__title">Or login whith</p>
+        <ul class="social-login__list">
+          <li class="social-login__item">
+            <a href="#" class="social-login__link">
+              <img src="img/svg/facebook-circle.svg" alt="facebook">
+            </a>
+          </li>
+          <li class="social-login__item">
+            <a href="#" class="social-login__link">
+              <img src="img/svg/twitter-circle.svg" alt="twitter">
+            </a>
+          </li>
+          <li class="social-login__item">
+            <a href="#" class="social-login__link">
+              <img src="img/svg/google-circle.svg" alt="google">
+            </a>
+          </li>
+        </ul>
+        <p>Dont have an account? <a href="#" class="modal__text-link" data-fancybox data-src="#modalSignup">Signup</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modalSignup">
+  <button class="close" data-fancybox-close>
+  </button>
+  <div class="modal__container">
+    <div class="modal__header">
+      <h4 class="title-4">Sign Up</h4>
+    </div>
+    <form class="modal-form">
+      <div class="form-box">
+        <label for="userEmail" class="form-label">
+          Email address
+          <input type="email" id="userEmail" placeholder="name@yuoremail.com" class="form-input">
+        </label>
+        <span class="error">Error!!!</span>
+      </div>
+      <div class="form-box">
+        <label for="userName" class="form-label">
+          Email address
+          <input type="email" id="userName" placeholder="name@yuoremail.com" class="form-input">
+        </label>
+        <span class="error">Error!!!</span>
+      </div>
+      <div class="form-box">
+        <label for="passwordNew" class="form-label">
+          Password
+          <input type="password" id="passwordNew" placeholder="password" class="form-input">
+        </label>
+        <span class="error">Error!!!</span>
+      </div>
+      <div class="form-box">
+        <label for="passwordRetype" class="form-label">
+          <input type="password" id="passwordRetype" placeholder="Retype password" class="form-input">
+        </label>
+        <span class="error">Error!!!</span>
+      </div>
+      <label for="agreeTrue" class="check-form__label">
+        <input type="checkbox" id="agreeTrue" class="check-form__input">
+        <span class="check-form__checkbox"></span> I agree to all the terms and condition
+      </label>
+      <button class="btn btn_primary" type="submit">Signup</button>
+    </form>
+    <div class="modal__footer">
+      <div class="social-login">
+        <ul class="social-login__list">
+          <li class="social-login__item">
+            <a href="#" class="social-login__link">
+              <img src="img/svg/facebook-circle.svg" alt="facebook">
+            </a>
+          </li>
+          <li class="social-login__item">
+            <a href="#" class="social-login__link">
+              <img src="img/svg/twitter-circle.svg" alt="twitter">
+            </a>
+          </li>
+          <li class="social-login__item">
+            <a href="#" class="social-login__link">
+              <img src="img/svg/google-circle.svg" alt="google">
+            </a>
+          </li>
+        </ul>
+        <p>Dont have an account? <a href="#" class="modal__text-link">Signup</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="modal" id="modalJoin">
+  <button class="close" data-fancybox-close>
+  </button>
+  <div class="modal__container">
+    <div class="modal__header">
+      <h4 class="title-4">Sign Up</h4>
+    </div>
+    <form class="join-form">
+      <p>Explore thousands of micro jobs everyday.
+        Do what you love and love what you do!</p>
+      <div class="join-form__box">
+        <img src="img/svg/mail.svg" alt="mail" class="mail-icon">
+        <label for="email" class="form-label">
+          <input type="email" id="email" placeholder="Enter your email" class="join-form__input">
+        </label>
+        <button class="btn btn_primary" type="submit">Continue</button>
+      </div>
+    </form>
+    <div class="modal__footer">
+      <div class="social-login">
+        <p class="social-login__title">Or join us whith</p>
+        <ul class="social-login__list">
+          <li class="social-login__item">
+            <a href="#" class="social-login__link">
+              <img src="img/svg/facebook-circle.svg" alt="facebook">
+            </a>
+          </li>
+          <li class="social-login__item">
+            <a href="#" class="social-login__link">
+              <img src="img/svg/twitter-circle.svg" alt="twitter">
+            </a>
+          </li>
+          <li class="social-login__item">
+            <a href="#" class="social-login__link">
+              <img src="img/svg/google-circle.svg" alt="google">
+            </a>
+          </li>
+        </ul>
+        <p>Already have an account? <a href="javascript:void(0);" data-fancybox data-src="#modalSignup" class="modal__text-link">Login</a></p>
+      </div>
+      <p class="modal__footer-text">By signing up, I agree to the Asana <a href="#">Privacy Policy </a>
+        and <a href="#">Terms of Service</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modalLirics">
+  <button class="close" data-fancybox-close>
+  </button>
+  <div class="modal__container">
+    <div class="modal__header">
+      <h4 class="title-4">Lyric</h4>
+    </div>
+    <div class="liric-content">
+      <p>Lorem, ipsum dolor.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eligendi dolores exercitationem dolor dolorem quia sapiente sunt, nostrum optio veritatis.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut aspernatur voluptas deleniti ex dolorum hic dolor temporibus, accusantium necessitatibus maiores facere delectus laboriosam possimus, excepturi earum explicabo totam quam labore voluptatibus cum! Ut voluptatibus architecto laboriosam molestiae, magnam nostrum exercitationem.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, odit!</p>
+    </div>
+  </div>
+</div>

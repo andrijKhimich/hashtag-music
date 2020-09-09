@@ -1,0 +1,112 @@
+.footer {
+  background-color: $footerBg;
+  padding-top: 115px;
+  color: $footerDark;
+
+  @include d(1199) {
+    padding-top: 80px;
+  }
+
+  @include d(768) {
+    padding-top: 60px;
+  }
+
+  &-logo {
+    max-width: 107px;
+    padding-top: 5px;
+    margin-right: 75px;
+    flex: 107px;
+
+    @include d(1199) {
+      margin-right: 40px;
+      max-width: 80px;
+      flex: 0 0 80px;
+    }
+
+    @include d(768) {
+      margin-right: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+
+    @include d(1199) {
+      padding-bottom: 40px;
+    }
+
+    @include d(768) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &-list-wrapper {
+    width: 100%;
+    margin-left: 140px;
+    display: flex;
+    justify-content: space-between;
+
+    @include d(1199) {
+      margin-left: 40px;
+    }
+
+    @include d(768) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &-list {
+    @include d(768) {
+      min-width: 160px;
+      margin-bottom: 20px;
+    }
+
+    &__item {
+      font-size: 14px;
+      margin-bottom: 10px;
+
+      &:first-child {
+        font-weight: 500;
+        color: $footerLight;
+        font-size: 16px;
+        pointer-events: none;
+      }
+    }
+
+    &__link {
+      font-weight: 400;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: #9a97a0;
+        transition: width $timing $hover-duration;
+      }
+      @include rh(104) {
+        &:hover {
+          &::before {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 40px 0 50px;
+
+  @include d(1199) {
+    padding: 15px 0 20px;
+  }
+}

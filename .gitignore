@@ -1,0 +1,12 @@
+/node_modules
+/dist
+/psd
+/src/libs
+/src/video
+/dist/video
+package-lock.json
+.DS_Store
+/.history
+/wp-content
+.idea/
+/.vscode

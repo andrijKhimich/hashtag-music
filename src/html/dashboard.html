@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Dashboard</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    @@include('components/_admin-aside.html')
+    <main class="main">
+      <section class="section section-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <div class="dashboard-title">
+                <h4 class="title-4">Dashboard</h4>
+              </div>
+              <div class="dashboard-content">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="dashboard-graph">
+                      <div class="dashboard-pane_sm">
+                        <div class="dashboard-graph-row">
+                          <p>Financial transactions</p>
+                          <img src="img/png/graph.png" alt="graph">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="dashboard-pane_sm dashboard-pane_top">
+                      <div class="dashboard_sm-row">
+                        <p>Sum</p>
+                      </div>
+                      <table class="dashboard-table_sm">
+                        <tr>
+                          <td>
+                            <p>Frozen sum</p>
+                          </td>
+                          <td><span>3000</span>$</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Awaiting payment</p>
+                          </td>
+                          <td><span>2500</span>$</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Paid</p>
+                          </td>
+                          <td><span>12200</span>$</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="dashboard-pane_sm dashboard-pane_top">
+                      <div class="dashboard-total">
+                        <p>Total number of users</p>
+                        <span>23600</span>
+                        <p>Total number of works</p>
+                        <span>34590</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="dashboard-pane_sm dashboard-pane_top">
+                      <div class="dashboard-available">
+                        <p>available to withdraw</p>
+                        <p class="price_bw"><span>2000</span>$</p>
+                        <button class="dashboard-btn">to bring out</button>
+                      </div>
+                    </div>
+                    <div class="dashboard-pane_sm dashboard-pane_top">
+                      <div class="user-statistic">
+                        <div class="dashboard-select__wrapper">
+                          <select class="dashboard-select">
+                            <option value="today">Today</option>
+                            <option value="yesterday">Yesterday</option>
+                          </select>
+                        </div>
+                        <table class="dashboard-table_sm">
+                          <tr>
+                            <td>
+                              <p>New users</p>
+                            </td>
+                            <td><span>1300</span></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>Deleted users</p>
+                            </td>
+                            <td><span>200</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                    <p>Advertising verification</p>
+                    <div class="dashboard-pane_sm varification-box js-one-height-2">
+                      <table class="verification-table" cellspacing="0">
+                        <tr>
+                          <td>
+                            <div class="number active">1.</div>
+                          </td>
+                          <td>Elvic Kongolo</td>
+                          <td>
+                            <div class="table-btn-group">
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#eye"></use>
+                                </svg>
+                              </button>
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#check2"></use>
+                                </svg>
+                              </button>
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="number active">2.</div>
+                          </td>
+                          <td>Elvic Kongolo</td>
+                          <td>
+                            <div class="table-btn-group">
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#eye"></use>
+                                </svg>
+                              </button>
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#check2"></use>
+                                </svg>
+                              </button>
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                      <button class="dashboard-btn">view all</button>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <p>Disputes</p>
+                    <div class="dashboard-pane_sm js-one-height-2">
+
+                      <table class="verification-table" cellspacing="0">
+                        <tr>
+                          <td>
+                            <div class="number active">1.</div>
+                          </td>
+                          <td>12.07.2020</td>
+                          <td>
+                            <div class="table-btn-group">
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#chat"></use>
+                                </svg>
+                              </button>
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="number active">2.</div>
+                          </td>
+                          <td>12.07.2020</td>
+                          <td>
+                            <div class="table-btn-group">
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#chat"></use>
+                                </svg>
+                              </button>
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="number active">3.</div>
+                          </td>
+                          <td>12.07.2020</td>
+                          <td>
+                            <div class="table-btn-group">
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#chat"></use>
+                                </svg>
+                              </button>
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="number active">4.</div>
+                          </td>
+                          <td>12.07.2020</td>
+                          <td>
+                            <div class="table-btn-group">
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#chat"></use>
+                                </svg>
+                              </button>
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="number active">5.</div>
+                          </td>
+                          <td>12.07.2020</td>
+                          <td>
+                            <div class="table-btn-group">
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#chat"></use>
+                                </svg>
+                              </button>
+                              <button class="table-btn">
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <p>Stop words</p>
+                    <div class="dashboard-pane_sm js-one-height-2">
+                      <form class="stop-form">
+                        <div class="stop-form__row">
+                          <div class="stop-form__box">
+                            <input type="text" class="stop-form__input" placeholder="Skype">
+                            <button class="header-search__btn" type="submit">
+                              <svg class="svg-search">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#search"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <button type="button" class="dashboard-btn_transparent">add</button>
+                        </div>
+                      </form>
+                      <div class="stop-tag-group">
+                        <div class="stop-tag">
+                          Skype
+                          <button class="stop-tag_remove">
+                            <svg class="svg-icon">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="stop-tag">
+                          Viber
+                          <button class="stop-tag_remove">
+                            <svg class="svg-icon">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="stop-tag">
+                          Facebook
+                          <button class="stop-tag_remove">
+                            <svg class="svg-icon">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="stop-tag">
+                          Telegram
+                          <button class="stop-tag_remove">
+                            <svg class="svg-icon">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="stop-tag">
+                          Instagram
+                          <button class="stop-tag_remove">
+                            <svg class="svg-icon">
+                              <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>

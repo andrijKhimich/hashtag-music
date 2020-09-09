@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Dashboard advertising</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    @@include('components/_admin-aside.html')
+    <main class="main">
+      <section class="section section-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <aside class="dashboard-sidebar">
+                <div class="dashboard-sidebar__content">
+                  <ul cla ss="dashboard-sidebar-nav">
+                    <li class="dashboard-sidebar-nav__item"><a href="#"
+                        class="dashboard-sidebar-nav__link">Advertising</a>
+                      <ul class="dashboard-sidebar-subnav">
+                        <li class="dashboard-sidebar-subnav__item ">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Balance
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Use of advertising
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </div>
+            <div class="col-lg-9">
+              <div class="dashboard-title">
+                <h4 class="title-4">Use of advertising</h4>
+              </div>
+              <div class="dashboard-content">
+                <div class="dashboard-pane">
+                  <div class="user-table-wrapper js-tabs-wrapper">
+                    <!-- <div class="date-sorting">
+                      October 10, 2018
+                      <svg class="svg-icon">
+                        <use xlink:href="img/svg/sprite-svg/sprite.svg#right"></use>
+                      </svg>
+                    </div> -->
+                    <div class="dashboard-select__wrapper">
+                      <select class="dashboard-select">
+                        <option value="today">Today</option>
+                        <option value="yesterday">Yesterday</option>
+                      </select>
+                    </div>
+                    <div class="tabs">
+                      <span class="tab-link">Featured Jobs</span>
+                      <span class="tab-link">Homepage banner</span>
+                      <span class="tab-link">Listing banner</span>
+                    </div>
+                    <div class="tab-content">
+                      <div class="tab-item">
+                        <table class="user-table" cellspacing="0">
+                          <tr>
+                            <th>№</th>
+                            <th>
+                              <div class="table-sort">
+                                Name
+                                <svg class="svg-icon">
+                                  <use xlink:href="img/svg/sprite-svg/sprite.svg#arrow-down"></use>
+                                </svg>
+                              </div>
+                            </th>
+                            <th>Deals</th>
+                            <th>Forbidden words</th>
+                            <th>Time left</th>
+                            <th>Price</th>
+                            <th></th>
+                          </tr>
+                          <tr>
+                            <td>1.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="tab-item">
+                        <table class="user-table" cellspacing="0">
+                          <tr>
+                            <th>№</th>
+                            <th>Name</th>
+                            <th>Deals</th>
+                            <th>Forbidden words</th>
+                            <th>Time left</th>
+                            <th>Price</th>
+                            <th></th>
+                          </tr>
+                          <tr>
+                            <td>1.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="tab-item">
+                        <table class="user-table" cellspacing="0">
+                          <tr>
+                            <th>№</th>
+                            <th>Name</th>
+                            <th>Deals</th>
+                            <th>Forbidden words</th>
+                            <th>Time left</th>
+                            <th>Price</th>
+                            <th></th>
+                          </tr>
+                          <tr>
+                            <td>1.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6.</td>
+                            <td>Elvic Kongolo</td>
+                            <td>135</td>
+                            <td>21</td>
+                            <td><span>126</span> h.</td>
+                            <td><span>5700</span>$</td>
+                            <td>
+                              <div class="table-icons">
+                                <span class="table-icons__item">
+                                  <img src="img/svg/chat.svg" alt="chat">
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>

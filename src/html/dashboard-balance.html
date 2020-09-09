@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Dashboard balance</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    @@include('components/_admin-aside.html')
+    <main class="main"> 
+      <section class="section section-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <aside class="dashboard-sidebar">
+                <div class="dashboard-sidebar__content">
+                  <ul cla ss="dashboard-sidebar-nav">
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Advertising</a>
+                      <ul class="dashboard-sidebar-subnav">
+                        <li class="dashboard-sidebar-subnav__item ">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Balance
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Use of advertising
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </div>
+            <div class="col-lg-9">
+              <div class="dashboard-title">
+                <h4 class="title-4">Balance</h4>
+              </div>
+              <div class="dashboard-content">
+                <div class="dashboard-pane">
+                  <div class="balance-table-wrapper">
+                    <table class="balance-table" cellspacing="0">
+                      <tr>
+                        <th>Placing</th>
+                        <th>Last today work</th>
+                        <th>Last Month</th>
+                        <th>Last year</th>
+                      </tr>
+                      <tr>
+                        <td>Featured Jobs</td>
+                        <td>200</td>
+                        <td>2000</td>
+                        <td>20000</td>
+                      </tr>
+                      <tr>
+                        <td>Homepage banner</td>
+                        <td>30</td>
+                        <td>100</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>Listing banner</td>
+                        <td>20</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>

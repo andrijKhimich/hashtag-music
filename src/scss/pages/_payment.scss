@@ -1,0 +1,107 @@
+.payment {
+  &-form {
+    width: 100%;
+  }
+
+  &-content {
+    padding: 60px 0;
+    max-width: 600px;
+    margin-bottom: 100px;
+    .btn-group {
+      margin-top: 60px;
+    }
+    @include d(992) {
+      padding: 40px 0;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    margin: 30px 0 50px;
+    max-width: 650px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    .slick-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    @include d(992) {
+      margin: 20px 0 30px;
+    }
+
+    & .slick-track {
+      // display: block;
+    }
+
+    &__item {
+      position: relative;
+      display: inline-block;
+      max-width: 200px;
+      width: 200px;
+      height: 150px;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+      background-color: $white;
+      opacity: .4;
+      transition: box-shadow $timing $hover-duration, opacity $timing $hover-duration;
+      @include d(576) {
+        max-width: initial;
+        flex: 0 0 auto;
+      }
+      &.active {
+        opacity: 1;
+        box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.09);
+      }
+
+      img {
+        max-width: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  &-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &-radio {
+    opacity: 0;
+  }
+}
+
+.counter {
+  margin-bottom: 50px;
+  color: $primary;
+  font-size: 30px;
+  font-weight: 600;
+
+  @include d(992) {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+}

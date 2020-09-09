@@ -1,0 +1,372 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  border-radius: $borderRadius;
+  background-color: rgba($white, .9);
+  z-index: 1000;
+  padding: 30px 15px 50px;
+  display: none;
+
+  @include d(992) {
+    padding: 20px 15px 40px;
+    max-width: 380px;
+  }
+  @include d(400) {
+    max-width: 90%;
+  }
+  &__container {
+    max-width: 380px;
+    margin: 0 auto;
+    max-height: 440px;
+    padding: 0 10px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 2px;
+      background-color: $white;
+    }
+  
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 1px $white;
+      box-shadow: inset 0 0 1px $white;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: $textColor;
+      outline: 1px solid $textColor;
+      transition: background-color .4s ease;
+  
+      &:hover {
+        background-color: $primaryDark;
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    text-align: center;
+    color: $primary;
+    margin-bottom: 20px;
+
+    @include d(992) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &-form {
+    width: 100%;
+    padding: 10px 0 10px;
+
+    .btn {
+      width: 100%;
+      max-width: 100%;
+      line-height: 34px;
+      text-transform: initial;
+
+      @include d(992) {
+        line-height: 40px;
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+
+    &-text {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  &__text-link {
+    color: $primary;
+    font-weight: 600;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: $primary;
+      transition: width $timing $hover-duration;
+      width: 0;
+    }
+
+    @include rh(1024) {
+      &:hover {
+        &::before {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.liric-content {
+  margin-top: 40px;
+  p {
+    &:first-child {
+      font-weight: 700;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &:not(:first-child) {
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+  }
+}
+
+.social-login {
+  // padding: 20px 40px;
+  text-align: center;
+
+  &__title {
+    text-align: center;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 90px;
+      height: 1px;
+      background-color: $grayLight;
+
+      @include d(992) {
+        width: 20%;
+      }
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
+}
+
+.forgot {
+  color: $primary;
+  font-weight: 600;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: $primary;
+    transition: width $timing $hover-duration;
+    width: 0;
+  }
+
+  @include rh(1024) {
+    &:hover {
+      &::before {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 0;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-image: url(../img/svg/close.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+  transition: transform $timing $hover-duration;
+  transform: rotate(0);
+
+  @include rh(1024) {
+    &:hover {
+      transform: rotate(135deg);
+    }
+  }
+
+  @include d(992) {
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.form-box {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  font-size: 14px;
+  color: $black;
+}
+
+.form-input {
+  border: 1px solid $grayLight;
+  line-height: 34px;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 0 20px;
+  margin-top: 10px;
+  transition: border-color $timing $hover-duration;
+
+  &:focus {
+    border-color: $primary;
+  }
+
+  &::-webkit-input-placeholder {
+    font-family: inherit;
+    font-size: 16px;
+    color: $textColor;
+  }
+
+  &::-moz-placeholder {
+    font-family: inherit;
+    font-size: 16px;
+    color: $grayLight;
+  }
+
+  &:-ms-input-placeholder {
+    font-family: inherit;
+    font-size: 16px;
+    color: $grayLight;
+  }
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: 16px;
+    color: $grayLight;
+  }
+}
+
+.error {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  right: 25px;
+  color: $primaryDark;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  display: none;
+}
+
+.mail-icon {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(0, -50%);
+  max-width: 25px;
+  @include d(480) {
+    top: 18%;
+  }
+}
+
+.join {
+  &-form {
+    width: 100%;
+    text-align: center;
+
+    p {
+      margin-bottom: 30px;
+    }
+    .social-login {
+      margin-bottom: 30px;
+    }
+    &__box {
+      position: relative;
+      margin-bottom: 20px;
+
+      .btn {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        line-height: 30px;
+        text-transform: capitalize;
+        font-size: 10px;
+        @include d(480) {
+          position: static;
+          margin: 20px auto;
+
+        }
+      }
+
+    }
+
+    &__input {
+      line-height: 40px;
+      border: 1px solid $grayLight;
+      border-radius: 50px;
+      padding-left: 80px;
+      padding-right: 100px;
+      @include iphone {
+        line-height: 36px;
+      }
+      @include d(992) {
+        line-height: 40px;
+      }
+      @include d(480) {
+        padding-right: 10px;
+      }
+      &::-webkit-input-placeholder {
+        font-family: inherit;
+        font-size: 16px;
+        color: $textColor;
+      }
+
+      &::-moz-placeholder {
+        font-family: inherit;
+        font-size: 16px;
+        color: $grayLight;
+      }
+
+      &:-ms-input-placeholder {
+        font-family: inherit;
+        font-size: 16px;
+        color: $grayLight;
+      }
+
+      &::placeholder {
+        font-family: inherit;
+        font-size: 16px;
+        color: $grayLight;
+      }
+    }
+  }
+}

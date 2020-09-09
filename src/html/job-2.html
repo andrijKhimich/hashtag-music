@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Step 2</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    <main class="main">
+      <section class="section section-post-job step-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="post-job__content">
+                <div class="post-job__title">
+                  <h4 class="title-4">Job Details</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum libero ipsam iure nulla labore
+                    expedita quis quae porro quod doloremque.</p>
+                </div>
+                <ul class="steps">
+                  <li class="steps__item passed">1</li>
+                  <li class="steps__item active">2</li>
+                  <li class="steps__item">3</li>
+                </ul>
+              </div>
+              <form class="job-form">
+                <div class="job-form__row job-form__radio-row">
+                  <label for="jobseeker" class="check-form__label check-form__label-btn checked">
+                    <input checked type="radio" name="job" id="jobseeker" class="check-form__input js-job-input">
+                    <span class="check-form__checkbox"></span>
+                    Jobseeker
+                  </label>
+                  <label for="employer" class="check-form__label check-form__label-btn">
+                    <input type="radio" name="job" id="employer" class="check-form__input js-job-input">
+                    <span class="check-form__checkbox"></span>
+                    Employer
+                  </label>
+                </div>
+                <div class="job-form__box">
+                  <label for="jobTitle">
+                    Job title
+                    <input id="jobTitle" type="text" class="job-form__input" placeholder="Job">
+                  </label>
+                </div>
+                <div class="job-form__row">
+                  <div class="job-form__box">
+                    <label for="category">
+                      Category
+                      <input id="category" type="text" class="job-form__input" placeholder="Category">
+                    </label>
+                  </div>
+                  <div class="job-form__box calendar">
+                    <label for="deliveryTime">
+                      Delivery Time
+                      <input id="deliveryTime" type="text" onclick="(this.type='date')" class="job-form__input"
+                        placeholder="Delivery Time">
+                    </label>
+                  </div>
+                </div>
+                <div class="job-form__box">
+                  Description
+                  <label for="description">
+                    <textarea id="description" rows="4" class="job-form__textarea"></textarea>
+                  </label>
+                </div>
+                <p>Add media</p>
+                <div class="job-form__add">
+                  <label class="job-form__add-item">
+                    <input type="file" class="job-form__add-input">
+                  </label>
+                  <div class="job-form__add-item added">
+                    <span class="remove-photo"></span>
+                    <div class="job-form__add-img">
+                      <img src="img/jpg/author.jpg" alt="author">
+                    </div>
+                  </div>
+                  <div class="job-form__add-item added">
+                    <span class="remove-photo"></span>
+                    <div class="job-form__add-img">
+                      <img src="img/jpg/author.jpg" alt="author">
+                    </div>
+                  </div>
+                  <div class="job-form__add-item added">
+                    <span class="remove-photo"></span>
+                    <div class="job-form__add-img">
+                      <img src="img/jpg/author.jpg" alt="author">
+                    </div>
+                  </div>
+                  <div class="job-form__add-item added">
+                    <span class="remove-photo"></span>
+                    <div class="job-form__add-img">
+                      <img src="img/jpg/author.jpg" alt="author">
+                    </div>
+                  </div>
+                  <label class="job-form__add-item">
+                    <input type="file" class="job-form__add-input">
+                  </label>
+                </div>
+                <div class="job-form__extra">
+                  <p>Extra</p>
+                  <div class="job-form__extra-content">
+                    <a href="#" class="remove-extra">
+                      <svg class="svg-xs">
+                        <use xlink:href="img/svg/sprite-svg/sprite.svg#plus"></use>
+                      </svg>
+                    </a>
+                    <div class="job-form__box">
+                      <div class="job-form__money">USD <input type="number" value="5" class="job-form__money-value">
+                      </div>
+                      <label>
+                        <input type="text" class="job-form__input job-form__input_lg" placeholder="Lorem lorem">
+                      </label>
+                    </div>
+                    <div class="job-form__box calendar">
+                      <label for="deliveryTime1">
+                        <input id="deliveryTime1" type="text" onclick="(this.type='date')" class="job-form__input"
+                          placeholder="Delivery Time">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="job-form__extra-content">
+                    <a href="#" class="remove-extra">
+                      <svg class="svg-xs">
+                        <use xlink:href="img/svg/sprite-svg/sprite.svg#plus"></use>
+                      </svg>
+                    </a>
+                    <div class="job-form__box">
+                      <div class="job-form__money">USD <input type="number" value="5" class="job-form__money-value">
+                      </div>
+                      <label for="">
+                        <input id="" type="text" class="job-form__input job-form__input_lg" placeholder="Lorem lorem">
+                      </label>
+                    </div>
+                    <div class="job-form__box calendar">
+                      <label for="deliveryTime2">
+                        <input id="deliveryTime2" type="text" onclick="(this.type='date')" class="job-form__input"
+                          placeholder="Delivery Time">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="add-extra">
+                  <p>Add Extra</p>
+                  <div class="add-job">
+                    <svg class="svg-xs">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#plus"></use>
+                    </svg>
+                  </div>
+                </a>
+                <div class="tags">
+                  <p>Tags</p>
+                  <div class="tags-container">
+                    <a href="#" class="tag tag-added"> <span class="tag-remove"></span> Guitarist</a>
+                    <a href="#" class="tag tag-added"> <span class="tag-remove"></span> Musik</a>
+                    <a href="#" class="tag tag-added"> <span class="tag-remove"></span> Recording</a>
+                    <a href="#" class="tag-add">Add</a>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <a href="#" class="btn btn_primary">save</a>
+                  <a href="#" class="btn-content">
+                    Discard
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>

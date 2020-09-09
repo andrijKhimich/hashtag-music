@@ -1,0 +1,562 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 25px 0 27px;
+  z-index: 1000;
+
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+
+    @include d(992) {
+      position: fixed;
+      top: 0;
+      right: -40vw;
+      background-color: $primaryDark;
+      width: 40vw;
+      bottom: 0;
+      align-items: flex-start;
+      padding: 20px 0;
+      z-index: 99999;
+      transition: right $timing $duration;
+    }
+
+    @include d(768) {
+      width: 70vw;
+      right: -70vw;
+    }
+
+    @include d(340) {
+      width: 100vw;
+      right: -100vw;
+    }
+
+    &.open {
+      right: 0;
+    }
+  }
+
+  &__btn {
+    margin-right: 0;
+    margin-left: 60px;
+
+    @include d(992) {
+      margin-left: 30px;
+    }
+  }
+
+  &__form {
+    margin-left: 100px;
+    margin-right: 20px;
+
+    @include d(1199) {
+      margin-left: 30px;
+    }
+
+    @include d(992) {
+      margin-right: 80px;
+      margin-left: auto;
+    }
+
+    @include d(575) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+
+    @include d(992) {
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+    }
+  }
+
+  &__subtitle {
+    margin: 43px 0;
+
+    @include d(1199) {
+      margin: 20px 0;
+    }
+  }
+
+  &_inner {
+    background-color: $primary;
+    padding: 20px 0;
+
+    .header-search {
+      display: none;
+    }
+  }
+
+  &-message {
+    display: flex;
+    margin-right: 20px;
+    margin-left: auto;
+
+    @include d(992) {
+      margin-right: 10px;
+      justify-content: flex-end;
+    }
+
+    @include d(575) {
+      margin-right: 5px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 10px;
+      width: 50px;
+      height: 50px;
+      flex: 0 0 50px;
+      background-color: #eaeaec;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color $timing $hover-duration;
+
+      .drop-list {
+        min-width: 140px;
+        right: auto;
+        left: 0;
+        pointer-events: initial;
+      }
+
+      @include d(768) {
+        flex: 0 0 30px;
+        height: 30px;
+        margin: 5px;
+
+      }
+
+      @include d(575) {
+        margin: 3px;
+      }
+
+      @include rh(1024) {
+        &:hover {
+          background-color: $white;
+
+          .svg-icon {
+            fill: $primary;
+          }
+
+          .drop-list {
+            top: 100%;
+            opacity: 1;
+          }
+        }
+      }
+
+      .svg-icon {
+        fill: $gray;
+        transition: fill $timing $hover-duration;
+      }
+    }
+
+    &__note {
+      width: 15px;
+      height: 15px;
+      border: 4px solid $white;
+      background-color: $primary;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__post-job {
+    display: flex;
+    align-items: center;
+    border: 1px solid $grayLight;
+    border-radius: 30px;
+    height: 48px;
+    width: 180px;
+    padding-left: 27px;
+    margin-right: 20px;
+    margin-left: auto;
+    transition: color $timing $hover-duration, border-color $timing $hover-duration;
+
+    @include rh(1024) {
+      &:hover {
+        border-color: $primary;
+        color: $primary;
+
+        .add-job {
+          transform: rotate(180deg);
+        }
+      }
+
+    }
+
+    @include d(992) {
+      width: 48px;
+      flex: 0 0 48px;
+      font-size: 0;
+      padding: 0;
+      border-radius: 50%;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    @include d(768) {
+      flex: 0 0 30px;
+      height: 30px;
+      width: 30px;
+    }
+
+    @include d(575) {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.menu {
+  color: $white;
+
+  @include d(992) {
+    font-size: 18px;
+  }
+
+  &-list {
+    &__item {
+      display: inline-block;
+      position: relative;
+      @include d(992) {
+        display: block;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: $white;
+        transition: width $timing $hover-duration;
+        width: 0;
+      }
+
+      @include rh(1024) {
+        &:hover {
+          &::before {
+            width: 50%;
+          }
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 55px;
+
+        @include d(1199) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  max-width: 300px;
+
+  @include d(1199) {
+    max-width: 220px;
+  }
+
+  @include d(768) {
+    max-width: 180px;
+    width: 100%;
+  }
+}
+
+.header-search {
+  position: relative;
+  max-width: 193px;
+
+  &__input {
+    width: 100%;
+    box-shadow: 0px 10px 20px 0px rgba(63, 60, 77, 0.1);
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 15px 45px 15px 25px;
+    border: 1px solid transparent;
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translate(0, -50%);
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+
+    @include rh(1024) {
+      &:hover {
+        .svg-search {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
+.svg-search {
+  width: 25px;
+  height: 25px;
+  fill: $textColor;
+  transition: fill $timing $hover-duration;
+}
+
+.header-loged {
+  background-color: $white;
+  padding: 10px 0;
+
+  .header-row {
+    justify-content: flex-end;
+  }
+
+  .header__form {
+    @include d(992) {
+      display: none;
+    }
+  }
+}
+
+.add-job {
+  width: 30px;
+  height: 30px;
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: 8px;
+  transform: rotate(0);
+  transition: transform $hover-duration $timing;
+
+  @include d(768) {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+  }
+
+  .svg-xs {
+    fill: $white;
+  }
+}
+
+.header-user__wrapper {
+  position: relative;
+
+  @include rh(1024) {
+    &:hover {
+      & .header-user::before {
+        border-color: $primary;
+      }
+
+      & .drop-list {
+        top: 100%;
+        opacity: 1;
+        pointer-events: initial;
+      }
+    }
+  }
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+
+  @include d(992) {
+    margin-left: 10px;
+  }
+
+  @include d(575) {
+    margin-left: 5px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #2a394e;
+    border-top: 2px solid #2a394e;
+    transform: rotate(-45deg);
+    right: 0;
+    top: 50%;
+    z-index: 1;
+    transform: translate(0, -50%) rotate(45deg);
+    transition: border-color $timing $hover-duration;
+
+    @include d(768) {
+      display: none;
+    }
+  }
+
+  @include rh(1024) {
+    &:hover {
+      &::before {
+        border-color: $primary;
+      }
+
+      &~.drop-list {
+        top: 100%;
+        opacity: 1;
+        pointer-events: initial;
+      }
+    }
+  }
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include d(575) {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    margin-left: 10px;
+    position: relative;
+    padding-right: 20px;
+
+    @include d(768) {
+      display: none;
+    }
+  }
+}
+
+.drop-list {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background-color: $white;
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $hover-duration $timing, top $hover-duration $timing;
+
+  @include d(768) {
+    width: 140px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__link {
+    transition: color $timing $hover-duration;
+
+    @include rh(1024) {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.humburger {
+  display: none;
+
+  @include d(992) {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    z-index: 10;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    z-index: 100001;
+  }
+
+  &-item {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: $white;
+    border-radius: 2px;
+    transition: transform $duration $timing, opacity $duration $timing, bottom $duration $timing, top $duration $timing, background-color $duration $timing;
+
+    &:first-child {
+      transform: rotate(0);
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      margin-top: -1px;
+      opacity: 1;
+    }
+
+    &:last-child {
+      transform: rotate(0);
+      bottom: 0;
+    }
+  }
+
+  &.open {
+    & .humburger-item {
+      background-color: $white;
+
+      &:first-child {
+        transform: rotate(45deg);
+        top: 7px;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+        bottom: 7px;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | List of categories</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    @@include('components/_admin-aside.html')
+    <main class="main">
+      <section class="section section-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <aside class="dashboard-sidebar">
+                <div class="dashboard-sidebar__content">
+                  <ul class="dashboard-sidebar-nav">
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Home</a>
+                      <ul class="dashboard-sidebar-subnav">
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Title
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Header slider
+                          </a>
+                          <ul class="dashboard-sidebar-subnav_sm">
+                            <li class="dashboard-sidebar-subnav_sm__item">
+                              <a href="#" class="dashboard-sidebar-subnav_sm__link">Photo group 1
+                              </a>
+                            </li>
+                            <li class="dashboard-sidebar-subnav_sm__item">
+                              <a href="#" class="dashboard-sidebar-subnav_sm__link">Photo group 2
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            List of categories
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            Banner
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            Slider
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            Banner2
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Blog</a>
+                    </li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Listing</a>
+                    </li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">How it
+                        works</a></li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Explore</a>
+                    </li>
+                  </ul>
+                </div>
+                <button class="add-page-btn">
+                  <svg class="svg-icon">
+                    <use xlink:href="img/svg/sprite-svg/sprite.svg#add"></use>
+                  </svg>
+                  Create new page
+                </button>
+              </aside>
+            </div>
+            <div class="col-lg-9">
+              <div class="dashboard-title">
+                <h4 class="title-4">List of categories</h4>
+              </div>
+              <div class="dashboard-pane">
+                <form class="category-form">
+                  <div class="category-form__row">
+                    <div class="category-form__img">
+                      <div class="photo-group__add">
+                        <input type="file" class="photo-group__add-input">
+                      </div>
+                    </div>
+                    <div class="category-form__content">
+                      <input type="text" class="dashboard-input" placeholder="Name">
+                      <div class="category-form__box">
+                        <div class="dashboard-input-select">
+                          <select class="dashboard-input">
+                            <option value="" disabled selected>Select parent</option>
+                            <option value="">Select parent 1</option>
+                            <option value="">Select parent 2</option>
+                          </select>
+                        </div>
+                        <input type="text" class="dashboard-input" placeholder="Sort order">
+                      </div>
+                      <div class="category-form__box">
+                        <label class="dashboard-input-label" for="displayOnPage">
+                          <input type="checkbox" id="displayOnPage" class="dashboard-input-checkbox">
+                          <span class="custom-checkbox"></span>
+                          Display on the main page
+                        </label>
+                        <button type="submit" class="dashboard-btn">add new</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="dashboard-tag-wrapper">
+                <div class="dashboard-tag">
+                  Musician
+                  <button class="dashboard-tag-btn">
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button class="dashboard-tag-btn">
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="dashboard-tag">
+                  Musician
+                  <button class="dashboard-tag-btn">
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button class="dashboard-tag-btn">
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="dashboard-tag">
+                  Musician
+                  <button class="dashboard-tag-btn">
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#edit"></use>
+                    </svg>
+                  </button>
+                  <button class="dashboard-tag-btn">
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#remove"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Dashboard header slider</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper js-fadeIn">
+    @@include('components/_header-loged.html')
+    @@include('components/_admin-aside.html')
+    <main class="main">
+      <section class="section section-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <aside class="dashboard-sidebar">
+                <div class="dashboard-sidebar__content">
+                  <ul class="dashboard-sidebar-nav">
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Home</a>
+                      <ul class="dashboard-sidebar-subnav">
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Title
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">Header slider
+                          </a>
+                          <ul class="dashboard-sidebar-subnav_sm">
+                            <li class="dashboard-sidebar-subnav_sm__item">
+                              <a href="#" class="dashboard-sidebar-subnav_sm__link">Photo group 1
+                              </a>
+                            </li>
+                            <li class="dashboard-sidebar-subnav_sm__item">
+                              <a href="#" class="dashboard-sidebar-subnav_sm__link">Photo group 2
+                              </a>
+                            </li>
+                            <button class="add-slider-btn">
+                              <svg class="svg-icon">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#add"></use>
+                              </svg>
+                              add new
+                            </button>
+                          </ul>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            List of categories
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            Banner
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            Slider
+                          </a>
+                        </li>
+                        <li class="dashboard-sidebar-subnav__item">
+                          <a href="#" class="dashboard-sidebar-subnav__link">
+                            Banner2
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Blog</a>
+                    </li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Listing</a>
+                    </li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">How it
+                        works</a></li>
+                    <li class="dashboard-sidebar-nav__item"><a href="#" class="dashboard-sidebar-nav__link">Explore</a>
+                    </li>
+                  </ul>
+                </div>
+                <button class="add-page-btn">
+                  <svg class="svg-icon">
+                    <use xlink:href="img/svg/sprite-svg/sprite.svg#add"></use>
+                  </svg>
+                  Create new page
+                </button>
+              </aside>
+            </div>
+            <div class="col-lg-9">
+              <div class="dashboard-title">
+                <h4 class="title-4">Banner</h4>
+              </div>
+              <div class="dashboard-content">
+                <p>Text</p>
+                <form class="text-form">
+                  <div class="text-form__row">
+                    <div class="text-form__manage">
+                      <div class="text-form__box select-nav">
+                        <select class="text-form__input weight-input">
+                          <option value="thin">Thin</option>
+                          <option value="extra light">Extra light</option>
+                          <option value="light">Light</option>
+                          <option value="regular">Regular</option>
+                          <option value="medium" selected>Medium</option>
+                          <option value="semibold">Semi bold</option>
+                          <option value="bold">Bold</option>
+                          <option value="extraBold">Extra-bold</option>
+                          <option value="black">Black</option>
+                        </select>
+                      </div>
+                      <div class="text-form__box select-nav">
+                        <select class="text-form__input size-input">
+                          <option value="10">10px</option>
+                          <option value="12">12px</option>
+                          <option value="14">14px</option>
+                          <option value="16" selected>16px</option>
+                          <option value="18">18px</option>
+                          <option value="20">20px</option>
+                        </select>
+                      </div>
+                      <div class="text-form__box">
+                        <input type="color" value="#cfcfcf" class="text-form__color">
+                      </div>
+                      <div class="text-form__box">
+                        <button class="input-btn active" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="img/svg/sprite-svg/sprite.svg#bold"></use>
+                          </svg>
+                        </button>
+                        <button class="input-btn" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="img/svg/sprite-svg/sprite.svg#italic"></use>
+                          </svg>
+                        </button>
+                        <button class="input-btn" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="img/svg/sprite-svg/sprite.svg#underline"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="text-form__box">
+                        <button class="input-btn active" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="img/svg/sprite-svg/sprite.svg#text-left"></use>
+                          </svg>
+                        </button>
+                        <button class="input-btn" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="img/svg/sprite-svg/sprite.svg#text-center"></use>
+                          </svg>
+                        </button>
+                        <button class="input-btn" type="button">
+                          <svg class="svg-icon">
+                            <use xlink:href="img/svg/sprite-svg/sprite.svg#text-right"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="text-form__btn-row">
+                      <button class="btn_sm dashboard-btn_transparent" type="reset">Clear</button>
+                      <button class="btn_sm dashboard-btn" type="submit">Select</button>
+                    </div>
+                  </div>
+                  <div class="text-form__text">
+                    <textarea rows="10" class="text-form__textarea"></textarea>
+                  </div>
+                </form>
+                <p>Button</p>
+                <div class="dashboard-pane">
+                  <form class="btn-form">
+                    <div class="btn-form__row">
+                      <input type="text" placeholder="Name" class="dashboard-input">
+                      <input type="text" placeholder="Link" class="dashboard-input">
+                      <button type="submit" class="dashboard-btn">
+                        Select
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  @@include('components/_modal.html')
+  @@include('links/_scripts.html')
+</body>
+
+</html>
